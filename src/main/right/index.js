@@ -5,9 +5,12 @@ import List from "./img/list.svg";
 import data from "./img/data.svg";
 
 function Right({ Change, status }) {
+  
+
+
   return (
     <>
-      <div className="rightBox">
+      <div className={status === true ? "rightBox" : "onRight"}>
         <div className="rightImgBox">
           <div className="rightImgClass" onClick={Change}>
             <img className="rightImg" src={List} />

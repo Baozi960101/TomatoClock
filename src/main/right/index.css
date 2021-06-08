@@ -4,6 +4,15 @@
   position: fixed;
   right: 0;
   top: 380px;
+  transition: all .8s;
+}
+.onRight{
+  width: 100px;
+  height: 250px;
+  position: fixed;
+  right: 450px;
+  top: 380px;
+  transition: all .8s;
 }
 .rightImgBox {
   display: flex;

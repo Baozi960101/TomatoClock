@@ -34,7 +34,7 @@ function Header() {
           />
         </div>
       </div>
-      <Main Change={Change} status={imgChange} />
+      <Main status={imgChange}/>
       <BackGround Change={Change} status={imgChange} />
       <RightBox Change={Change} status={imgChange} />
       <Bottom Change={Change} status={imgChange} />
