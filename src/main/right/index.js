@@ -14,6 +14,7 @@ function Right({ Change, status }) {
         <div className="rightImgBox">
           <div className="rightImgClass" onClick={Change}>
             <img className="rightImg" src={List} />
+            2
           </div>
         </div>
         <div className="rightImgBox">
