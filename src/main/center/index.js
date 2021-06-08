@@ -1,0 +1,31 @@
+import { React, useState } from "react";
+import "./index.css";
+import Bell from "./img/bell.svg";
+import Pause from "./img/pause.svg";
+import Start from "./img/start.svg";
+
+function Center() {
+  return (
+    <>
+      <div className="mainBox">
+        <div className="circle">
+          <div className="clockClass clockTopTitle">小拇指伏地挺身</div>
+          <div className="clockClass clockMidTitle">25:00</div>
+          <div className="clockClass clockbotTitle">
+            <div className="clockBot">
+              <img className="clockBotLogo" src={Bell} />
+            </div>
+            <div className="clockBot">
+              <img className="clockBotLogo" src={Start} />
+            </div>
+            <div className="clockBot">
+              <img className="clockBotLogo" src={Pause} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Center;

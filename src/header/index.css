@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 body {
   background-color: #bc2b35;
   margin: 50px;
@@ -20,13 +22,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 225px;
   height: 40px;
   border-left: beige 1px solid;
   box-sizing: border-box;
   margin-left: 12px;
+  color: rgb(250, 249, 177);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
 }
 .headerLeftBox {
-  width: 300px;
   display: flex;
+}
+.menuLogo {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
