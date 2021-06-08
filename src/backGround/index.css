@@ -1,0 +1,18 @@
+.backGroundLeft {
+  width: 550px;
+  height: 65%;
+  background-color: #c72f39;
+  position: fixed;
+  left: -300px;
+  top: 25%;
+  border-radius: 50% !important;
+}
+.backGroundRight {
+  width: 550px;
+  height: 65%;
+  background-color: #c72f39;
+  position: fixed;
+  right: -300px;
+  top: 25%;
+  border-radius: 50% !important;
+}
