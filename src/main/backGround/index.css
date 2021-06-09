@@ -49,7 +49,7 @@
   border: 0;
   outline: none;
 }
-.menuMainBox{
+.menuMainBox {
   box-sizing: border-box;
   margin-top: 15px;
   width: 100%;
@@ -57,4 +57,39 @@
   background-color: #bc2b35;
   border-radius: 18px;
   overflow: hidden;
+}
+.menuMainTop {
+  width: 100%;
+  height: 30px;
+  background-color: #d44852;
+}
+.menuMainProject {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 0 30px;
+}
+.menuMainimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+.menuMainimg > img {
+  padding-top: 7px;
+  width: 30px;
+  height: 30px;
+}
+.menuMainText {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  color: white;
+  padding-top: 5px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  border-bottom: 1px dashed white;
 }
