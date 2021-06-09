@@ -7,9 +7,12 @@ function BackGround({ status }) {
       <div className="backGroundLeft"></div>
       <div className="backGroundChangeRight">
         <div className="menuBox">
-          <input className="menuTitleBox" value="" />
+          <input className="menuTitleBox" value=""/>
+          <div className="menuMainBox">
+          
         </div>
-        <div></div>
+        </div>
+        
       </div>
     </>
   );
