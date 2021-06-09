@@ -1,14 +1,13 @@
-import { React, useState ,useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import "./index.css";
 import Bell from "./img/bell.svg";
 import Pause from "./img/pause.svg";
 import Start from "./img/start.svg";
 
-function Center({status}) {
-
+function Center({ status }) {
   useEffect(() => {
     console.log(status);
-  },[status]);
+  }, [status]);
 
   return (
     <>

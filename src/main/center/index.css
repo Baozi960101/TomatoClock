@@ -12,9 +12,9 @@
   border-radius: 50% !important;
   border: rgb(235, 229, 217) solid 3px;
   z-index: 1;
-  transition: all .8s;
+  transition: all 0.8s;
 }
-.circleOn{
+.circleOn {
   box-sizing: border-box;
   margin-top: 8%;
   width: 34%;
@@ -23,7 +23,7 @@
   border: rgb(235, 229, 217) solid 3px;
   margin-right: 1100px;
   z-index: 1;
-  transition: all .8s;
+  transition: all 0.8s;
 }
 .clockClass {
   display: flex;
