@@ -3,10 +3,7 @@ import "./index.css";
 import Logo from "./img/tomatoLogo.png";
 import Menu from "./img/menu.svg";
 import Cross from "./img/cross.svg";
-import Main from "../main/center/index";
-import BackGround from "../main/backGround/index";
 import RightBox from "../main/right/index";
-import Bottom from "../Bottom/index";
 
 function Header() {
   const [imgChange, setimgChange] = useState(true);
@@ -34,10 +31,7 @@ function Header() {
           />
         </div>
       </div>
-      <Main status={imgChange} />
-      <BackGround status={imgChange} />
       <RightBox Change={Change} status={imgChange} />
-      <Bottom Change={Change} status={imgChange} />
     </>
   );
 }

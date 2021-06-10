@@ -5,10 +5,6 @@ import Pause from "./img/pause.svg";
 import Start from "./img/start.svg";
 
 function Center({ status }) {
-  useEffect(() => {
-    console.log(status);
-  }, [status]);
-
   return (
     <>
       <div className="mainBox">

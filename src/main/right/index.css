@@ -5,6 +5,7 @@
   right: 0;
   top: 380px;
   transition: all 0.8s;
+  z-index: 1;
 }
 .onRight {
   width: 100px;
@@ -13,6 +14,7 @@
   right: 450px;
   top: 380px;
   transition: all 0.8s;
+  z-index: 1;
 }
 .rightImgBox {
   display: flex;

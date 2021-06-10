@@ -29,14 +29,23 @@
   transition: all 0.8s;
 }
 .menuBox {
-  position: fixed;
-  top: 21%;
-  right: 2%;
   width: 350px;
   height: 550px;
   background-color: #c72f39;
   border-radius: 20px;
   overflow: hidden;
+}
+.menuBoxChangeOn {
+  position: fixed;
+  top: 21%;
+  right: 2%;
+  transition: all 0.8s;
+}
+.menuBoxChangeOff {
+  position: fixed;
+  top: 21%;
+  right: -50%;
+  transition: all 0.8s;
 }
 .menuTitleBox {
   box-sizing: border-box;
@@ -92,4 +101,44 @@
   font-size: 28px;
   letter-spacing: 1px;
   border-bottom: 1px dashed white;
+}
+.dataImg {
+  width: 377px;
+  height: 450px;
+}
+.dataImgChangeOn {
+  position: fixed;
+  top: 21%;
+  right: 2%;
+  transition: all 0.8s;
+}
+.dataImgChangeOff {
+  position: fixed;
+  top: 21%;
+  right: -50%;
+  transition: all 0.8s;
+}
+.timeBox {
+  width: 380px;
+  height: 400px;
+  background-color: rgb(134, 138, 136);
+}
+.timeBoxTitle {
+  display: flex;
+  width: 100%;
+  height: 12%;
+  color: black;
+  font-size: 35px;
+}
+.timeBoxMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  box-sizing: border-box;
+  border-bottom: 1px white dashed;
+  background-color: aquamarine;
+  font-size: 25px;
+  padding: 0 20px 0 25px;
 }
