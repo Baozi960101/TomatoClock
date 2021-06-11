@@ -4,7 +4,13 @@ import "./index.css";
 function Bottom({ status }) {
   return (
     <>
-      <div className="bottomBox">NEXT : 睜眼5分鐘</div>
+      <div
+        className={
+          status === true ? "bottomBox bottomBoxOn" : "bottomBox bottomBoxOff"
+        }
+      >
+        NEXT : 睜眼5分鐘
+      </div>
     </>
   );
 }

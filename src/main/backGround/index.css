@@ -121,13 +121,13 @@
 .timeBox {
   width: 380px;
   height: 400px;
-  background-color: rgb(134, 138, 136);
+  color: white;
 }
 .timeBoxTitle {
   display: flex;
   width: 100%;
   height: 12%;
-  color: black;
+  color: white;
   font-size: 35px;
 }
 .timeBoxMain {
@@ -138,7 +138,49 @@
   height: 15%;
   box-sizing: border-box;
   border-bottom: 1px white dashed;
-  background-color: aquamarine;
   font-size: 25px;
   padding: 0 20px 0 25px;
+}
+.timeON {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  padding-right: 25px;
+  padding-top: 10px;
+}
+.timeONButton {
+  width: 70px;
+  height: 50px;
+  border: 0;
+  font-size: 21px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(173, 173, 173);
+  background-color: aquamarine;
+}
+.timeONButton:hover {
+  background-color: rgb(111, 221, 184);
+}
+
+.timeONButton:active {
+  background-color: rgb(104, 197, 166);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  transition: all 0.1s;
+}
+.optionUi {
+  padding-left: 10px;
+  width: 60px;
+  height: 40px;
+  background-color: rgba(127, 255, 212, 0);
+  outline: none;
+  border-color: azure;
+  color: white;
+}
+.optionUicolor {
+  color: black;
 }

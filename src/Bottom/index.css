@@ -2,11 +2,18 @@ body {
   overflow: hidden;
 }
 .bottomBox {
-  display: flex;
-  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   margin-top: 15px;
   font-size: 30px;
   color: rgb(243, 192, 115);
+  transition: all 0.8s;
+}
+.bottomBoxOn {
+  display: flex;
+  padding-left: 44%;
+}
+.bottomBoxOff {
+  display: flex;
+  padding-left: 13%;
 }

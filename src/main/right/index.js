@@ -4,7 +4,6 @@ import Settings from "./img/settings.svg";
 import List from "./img/list.svg";
 import data from "./img/data.svg";
 import BackGround from "../backGround/index";
-import Main from "../center/index";
 import Bottom from "../../Bottom/index";
 
 function Right({ Change, status }) {
@@ -67,7 +66,6 @@ function Right({ Change, status }) {
           </div>
         </div>
       </div>
-      <Main status={status} />
       <BackGround Change={Change} status={status} nowTableStatus={nowStatus} />
       <Bottom status={status} />
     </>
