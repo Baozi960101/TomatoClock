@@ -1,39 +1,59 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import "./index.css";
 import Stop from "./img/stop.svg";
 import Pause from "./img/pause.svg";
 import Start from "./img/start.svg";
 
 function Center({ status, minutetTime, secondTime }) {
-  const [minutetData, setMinuteDatat] = useState("");
+  const [minutetData, setMinuteData] = useState("");
   const [secondData, setSecondData] = useState("");
-  const [timeOn, setTimeOn] = useState(false);
-
-  let allSecond = Number(minutetTime) * 60 + Number(secondTime);
-  let minutet = Math.floor(allSecond / 60);
-  let second = Math.floor(allSecond % 60);
+  const [timeGo, setTimeGo] = useState(false);
+  const [timeOut, setTimeOut] = useState(true);
+  const goRef = useRef("");
 
   useEffect(() => {
-    setMinuteDatat(minutet);
-    setSecondData(second);
+    setMinuteData(minutetTime);
+    setSecondData(secondTime);
   }, [minutetTime, secondTime]);
 
-  var out;
-
   function start() {
-    setTimeOn(true);
-    if (timeOn === true) {
+    setTimeGo(true);
+    if (timeGo === true) {
       return;
     }
-    out = setTimeout(start, 1000);
-    second -= 1;
-    setSecondData(second);
-    console.log(second);
+    setTimeOut(true);
+    function so() {
+      if (secondTime == 0) {
+        if (minutetTime == 0) {
+          console.log("時間到");
+          return;
+        }
+        minutetTime = parseInt(minutetTime) - 1;
+        setMinuteData(minutetTime);
+        secondTime = 60;
+      }
+      secondTime -= 1;
+      setSecondData(secondTime);
+    }
+    goRef.current = setInterval(so, 1000);
   }
 
   function stop() {
-    clearTimeout(out);
-    console.log(secondData);
+    setTimeOut(false);
+    if (timeOut === false) {
+      return;
+    }
+    setTimeGo(false);
+    clearInterval(goRef.current);
+    setSecondData(secondTime);
+  }
+
+  function rest() {
+    setTimeGo(false);
+    setTimeOut(true);
+    clearInterval(goRef.current);
+    setSecondData(secondTime);
+    setMinuteData(minutetTime);
   }
 
   return (
@@ -46,14 +66,14 @@ function Center({ status, minutetTime, secondTime }) {
             {secondData < 10 ? "0" + secondData : secondData}
           </div>
           <div className="clockClass clockbotTitle">
-            <div className="clockBot">
+            <div className="clockBot" onClick={rest}>
               <img className="clockBotLogo" src={Stop} />
             </div>
-            <div className="clockBot">
-              <img className="clockBotLogo" src={Start} onClick={start} />
+            <div className="clockBot" onClick={start}>
+              <img className="clockBotLogo" src={Start} />
             </div>
-            <div className="clockBot">
-              <img className="clockBotLogo" src={Pause} onClick={stop} />
+            <div className="clockBot" onClick={stop}>
+              <img className="clockBotLogo" src={Pause} />
             </div>
           </div>
         </div>
