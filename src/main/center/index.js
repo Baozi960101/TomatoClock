@@ -10,6 +10,8 @@ function Center({ status, minutetTime, secondTime }) {
   const [timeGo, setTimeGo] = useState(false);
   const [timeOut, setTimeOut] = useState(true);
   const goRef = useRef("");
+  const minutetRef = useRef("")
+  const secondRef = useRef(7)
 
   useEffect(() => {
     setMinuteData(minutetTime);
@@ -33,7 +35,9 @@ function Center({ status, minutetTime, secondTime }) {
         secondTime = 60;
       }
       secondTime -= 1;
-      setSecondData(secondTime);
+      secondRef.current = secondTime
+      setSecondData(secondRef.current);
+      console.log("再跑了",secondRef.current);
     }
     goRef.current = setInterval(so, 1000);
   }
@@ -45,7 +49,8 @@ function Center({ status, minutetTime, secondTime }) {
     }
     setTimeGo(false);
     clearInterval(goRef.current);
-    setSecondData(secondTime);
+    setSecondData(secondRef.current);
+    console.log("停止了",secondRef.current);
   }
 
   function rest() {
